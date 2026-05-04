@@ -3,98 +3,77 @@
   <img src="images/banner.png" alt="Body Performance Analytics Banner" width="100%">
 </p>
 
-#                                    🏋️ Body Performance Intelligence System (Hayper Digi)
-
-![Status](https://img.shields.io/badge/Status-Completed-success.svg)
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-
-An end-to-end Machine Learning pipeline to classify physical performance levels based on biometric data.
-
-## 👥 Team Members (Hayper Digi)
-- **Mohamed Khaled Mahmoud** (Team Leader)
-- **Mohamed Eid Abdelkhalek**
-- **Youssef Mohamed Elkoumy**
-- **Moamen Essam Omar**
-- **Mahmoud Maher**
+# 🏋️ Body Performance Analytics & Intelligent Classification System
+### Introduction to AI & Machine Learning Project | Team Hayper Digi
 
 ---
 
-## 📊 1. Exploratory Data Analysis (EDA)
-We conducted a comprehensive EDA to uncover data distributions, anomalies, and relationships.
+## 📝 1. Project Objective
+The primary goal of this project is to develop a robust Machine Learning pipeline capable of:
+1. **Classification:** Categorizing individuals into four physical performance grades (**A, B, C, D**) based on biometric and physical test data.
+2. **Regression:** Predicting the **Broad Jump** distance (power metric) based on other physiological attributes.
 
-### Data Distributions & Outliers
-<p align="center">
-  <img src="images/histogram_distributions.png" alt="Histograms" width="48%">
-  <img src="images/categorical_distributions.png" alt="Categorical" width="48%">
-</p>
-<p align="center">
-  <img src="images/boxplot_outliers.png" alt="Boxplots" width="80%">
-</p>
-
-### Feature Relationships & Importance
-<p align="center">
-  <img src="images/correlation_heatmap.png" alt="Correlation Heatmap" width="48%">
-  <img src="images/scatter_plots.jpg" alt="Scatter Plots" width="48%">
-</p>
-<p align="center">
-  <img src="images/feature_importance.png" alt="Feature Importance" width="80%">
-</p>
+## 👥 2. Team Members (Hayper Digi)
+| Role | Name |
+| :--- | :--- |
+| **👑 Team Leader** | Mohamed Khaled Mahmoud |
+| **Member** | Mohamed Eid Abdelkhalek |
+| **Member** | Youssef Mohamed Elkoumy |
+| **Member** | Moamen Essam Omar |
+| **Member** | Mahmoud Maher |
 
 ---
 
-## ⚙️ 2. Hyperparameter Tuning
-Optimizing our models to ensure the highest possible accuracy without overfitting.
-<p align="center">
-  <img src="images/hyperparameter_tuning.png" alt="Hyperparameter Tuning" width="80%">
-</p>
+## 📂 3. Dataset Overview
+We utilized the **Body Performance Dataset**, which contains **13,393 records**.
+- **Biometric Data:** Age, Gender, Height, Weight, Body Fat %, Diastolic/Systolic BP.
+- **Performance Metrics:** Grip Force, Sit and Bend Forward, Sit-ups, Broad Jump.
+- **Target:** Performance Class (A=Best, D=Lowest).
 
 ---
 
-## 🏆 3. Classification Results
-Evaluating our Machine Learning models on their ability to correctly classify physical performance into 4 distinct grades (A, B, C, D).
+## ⚙️ 4. Project Workflow (Step-by-Step)
 
-<p align="center">
-  <img src="images/classification_comparison.png" alt="Classification Comparison" width="48%">
-  <img src="images/best_model_comparison_chart.jpg" alt="Best Model Chart" width="48%">
-</p>
+### Phase 1: Data Preprocessing & Cleaning
+In this initial stage, we ensured data integrity through:
+- **Standardization:** Renaming columns and removing special characters.
+- **Integrity Checks:** Identifying and handling missing values and duplicate records.
+- **Outlier Management:** Using the Interquartile Range (IQR) method to cap extreme physiological values (e.g., Body Fat % and Blood Pressure) to prevent model distortion.
 
-### Confusion Matrices & Split Stability
-Analyzing where our models succeed, where adjacent physiological classes overlap, and ensuring model stability across different Train/Test splits.
-<p align="center">
-  <img src="images/confusion_matrices.png" alt="Confusion Matrices" width="48%">
-  <img src="images/split_comparison.png" alt="Train/Test Split Comparison" width="48%">
-</p>
+### Phase 2: Exploratory Data Analysis (EDA)
+Instead of just viewing plots, we analyzed underlying patterns:
+- **Correlation Mapping:** Identifying how `sit-ups` and `grip force` strongly influence the final performance grade.
+- **Distribution Analysis:** Examining the balance between genders and age groups to ensure a non-biased model.
+
+### Phase 3: Feature Engineering & Selection
+We boosted model performance by creating 7 new features, including:
+- **BMI (Body Mass Index):** A critical indicator of physical health.
+- **Fitness Score:** A composite metric derived from multiple physical tests.
+- **Feature Selection:** Using a 3-method ensemble (SelectKBest, Random Forest Importance, and Correlation) to select the top 10 most impactful features.
+
+### Phase 4: Model Implementation
+We implemented a multi-model architecture to compare performance:
+- **Classification:** KNN, Decision Trees, SVM (Linear & RBF), Neural Networks (MLP), and Hist-Gradient Boosting.
+- **Regression:** Linear Regression, Ridge, and Gradient Boosting Regressor.
+- **Hyperparameter Tuning:** Using GridSearchCV to find the optimal parameters for each model.
+
+### Phase 5: Evaluation & Testing
+Models were evaluated using:
+- **Accuracy & F1-Score** for classification.
+- **R² & RMSE** for regression.
+- **Cross-Validation:** Ensuring stability across different data splits (80/20, 70/30, and 50/50).
 
 ---
 
-## 📈 4. Regression Analysis
-In addition to classification, we built regression models to predict exact physical output metrics (e.g., Broad Jump distance).
-<p align="center">
-  <img src="images/regression_comparison.png" alt="Regression Models Comparison" width="48%">
-  <img src="images/best_regressor_analysis.jpg" alt="Best Regressor Analysis" width="48%">
-</p>
+## 🛠️ 5. Tools & Technologies
+- **Language:** Python 3.8+
+- **Libraries:** Pandas, NumPy, Scikit-Learn.
+- **Visualization:** Matplotlib, Seaborn.
+- **Environment:** Jupyter Notebook / VS Code.
 
 ---
 
-## 📁 Repository Structure
-```text
-├── data/
-│   └── bodyPerformance.csv
-├── images/
-│   ├── banner.png
-│   ├── best_model_comparison_chart.jpg
-│   ├── best_regressor_analysis.jpg
-│   ├── boxplot_outliers.png
-│   ├── categorical_distributions.png
-│   ├── classification_comparison.png
-│   ├── confusion_matrices.png
-│   ├── correlation_heatmap.png
-│   ├── feature_importance.png
-│   ├── histogram_distributions.png
-│   ├── hyperparameter_tuning.png
-│   ├── regression_comparison.png
-│   ├── scatter_plots.jpg
-│   └── split_comparison.png
-├── main.py
-├── Body_Performance_Report.pdf
-└── README.md
+## 🚀 6. How to Run the Project
+1. **Clone the repository:**
+   ```bash
+   git clone (https://github.com/mohamedkhaledmahmoud97-ux/Body-Performance-ML.git)
