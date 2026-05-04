@@ -444,8 +444,8 @@ Where $h_m(x)$ is fit to the **negative gradient** (pseudo-residuals) of the los
 | 🥉 | **SVM (RBF) Regressor** | Mahmoud Maher | ~0.86–0.90 | ~13–15 | ~10–12 |
 | 4️⃣ | **KNN Regressor** | Mohamed Eid | ~0.83–0.87 | ~14–17 | ~11–13 |
 | 5️⃣ | **Decision Tree Regressor** | Youssef El-Koumi | ~0.82–0.86 | ~15–18 | ~12–14 |
-| 6️⃣ | **Linear Regression** | Mohamed Eid | ~0.78–0.82 | ~17–20 | ~13–15 |
-| 6️⃣ | **Ridge Regression** | Mohamed Eid | ~0.78–0.82 | ~17–20 | ~13–15 |
+| 6️⃣ | **Linear Regression** | Mohamed Khaled | ~0.78–0.82 | ~17–20 | ~13–15 |
+| 6️⃣ | **Ridge Regression** | Mohamed Khaled | ~0.78–0.82 | ~17–20 | ~13–15 |
 | 7️⃣ | **SVM (Linear) Regressor** | Mahmoud Maher | ~0.76–0.80 | ~18–21 | ~14–16 |
 
 > 📌 **R² ≈ 0.93** means the Gradient Boosting Regressor explains **~93%** of the total variance in broad jump distance — a remarkably high explanatory power for a biometric regression task.
