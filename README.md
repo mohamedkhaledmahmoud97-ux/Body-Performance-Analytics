@@ -1,3 +1,4 @@
+<h1 align="center">🏋️ Body Performance Analytics</h1>
 <p align="center">
   <img src="images/banner.png" alt="Body Performance Analytics Banner" width="100%">
 </p>
