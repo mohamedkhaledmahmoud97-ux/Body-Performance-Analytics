@@ -579,7 +579,7 @@ pipeline.fit(X_train, y_train)
 
 <p align="center">
   <strong>🏋️ Body Performance Analytics & Intelligent Classification System</strong><br/>
-  <em>Developed with precision by Team <strong>Hayper Digi</strong> · Academic Year 2024–2025</em><br/><br/>
+  <em>Developed with precision by Team <strong>Hayper Digi</strong> · Academic Year 2025–2026</em><br/><br/>
   <img src="https://img.shields.io/badge/Made%20with-❤️%20%26%20Python-blue?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/Team-Hayper%20Digi-gold?style=for-the-badge"/>
 </p>
