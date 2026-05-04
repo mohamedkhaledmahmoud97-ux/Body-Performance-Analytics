@@ -25,7 +25,7 @@
 
 <p align="center">
   <em>A rigorous, end-to-end Machine Learning pipeline for biometric performance classification and athletic prediction</em><br/>
-  <strong>Course:</strong> Introduction to AI and Machine Learning &nbsp;|&nbsp; <strong>Academic Year:</strong> 2024 – 2025
+  <strong>Course:</strong> Introduction to AI and Machine Learning &nbsp;|&nbsp; <strong>Academic Year:</strong> 2025 – 2026
 </p>
 
 ---
